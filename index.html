@@ -1,0 +1,117 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Muhammad Sabir Riaz — WordPress & Shopify Developer specialising in custom themes, e-commerce, performance and AI automation.">
+  <title>Muhammad Sabir Riaz | WordPress & Shopify Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+  <style>
+    :root { --ink:#12211d; --muted:#62716c; --line:#dce6e1; --paper:#fff; --wash:#f4f8f6; --accent:#157a5d; --lime:#c6f35b; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body { margin:0; background:#e6eeea; color:var(--ink); font-family:Manrope,Arial,sans-serif; line-height:1.55; }
+    .page { max-width:1180px; margin:32px auto; overflow:hidden; background:var(--paper); box-shadow:0 20px 70px rgba(21,50,41,.14); }
+    .hero { position:relative; min-height:370px; padding:50px 58px 42px; overflow:hidden; background:var(--ink); color:white; }
+    .hero:after { content:""; position:absolute; right:-75px; bottom:-125px; width:430px; height:430px; border:1px solid rgba(198,243,91,.42); border-radius:50%; box-shadow:0 0 0 36px rgba(198,243,91,.08), 0 0 0 87px rgba(198,243,91,.05); }
+    .topline { display:flex; justify-content:space-between; gap:24px; align-items:center; position:relative; z-index:1; }
+    .brand, .eyebrow, .label { font:500 11px/1.25 "DM Mono",monospace; letter-spacing:.11em; text-transform:uppercase; }
+    .brand { color:var(--lime); }
+    .availability { display:flex; align-items:center; gap:9px; font-size:12px; color:#d2dfd9; }
+    .availability i { display:block; width:8px; height:8px; border-radius:50%; background:var(--lime); box-shadow:0 0 0 5px rgba(198,243,91,.13); }
+    h1 { position:relative; z-index:1; max-width:800px; margin:48px 0 7px; font-size:clamp(38px,6vw,76px); letter-spacing:-.065em; line-height:.98; }
+    .role { position:relative; z-index:1; margin:0; color:var(--lime); font-weight:700; font-size:clamp(16px,2vw,21px); }
+    .contact { position:relative; z-index:1; display:flex; flex-wrap:wrap; gap:8px 20px; margin-top:52px; font-size:13px; }
+    .contact a { color:white; text-decoration:none; border-bottom:1px solid rgba(255,255,255,.28); }
+    main { display:grid; grid-template-columns:34% 66%; }
+    aside { padding:42px 40px 52px 58px; background:var(--wash); }
+    .content { padding:42px 58px 58px 46px; }
+    section + section { margin-top:38px; }
+    .section-title { display:flex; gap:12px; align-items:center; margin:0 0 16px; color:var(--accent); font:500 11px/1.25 "DM Mono",monospace; letter-spacing:.12em; text-transform:uppercase; }
+    .section-title:after { content:""; height:1px; flex:1; background:var(--line); }
+    .summary { margin:0; font-size:15px; color:#34443e; }
+    .skills { display:flex; flex-wrap:wrap; gap:8px; }
+    .tag { padding:6px 9px; border:1px solid #cbdad3; border-radius:4px; background:white; color:#395147; font-size:11px; font-weight:700; line-height:1.25; }
+    .skill-group + .skill-group { margin-top:22px; }
+    .skill-group h3 { margin:0 0 8px; font-size:12px; color:#365047; }
+    .ai-box { padding:18px; border-radius:4px; background:var(--accent); color:white; }
+    .ai-box h3 { margin:0 0 7px; color:var(--lime); font-size:14px; }
+    .ai-box p { margin:0; color:#e4f2ec; font-size:12px; line-height:1.55; }
+    .project-grid { display:grid; grid-template-columns:1fr 1fr; gap:9px 20px; margin:0; padding:0; list-style:none; }
+    .project-grid li { font:500 11px/1.5 "DM Mono",monospace; color:#466057; overflow-wrap:anywhere; }
+    .project-grid li:before { content:"↗ "; color:var(--accent); }
+    .job { position:relative; padding:0 0 28px 24px; border-left:1px solid var(--line); }
+    .job:last-child { padding-bottom:0; }
+    .job:before { content:""; position:absolute; top:5px; left:-5px; width:9px; height:9px; border-radius:50%; background:var(--accent); }
+    .job-head { display:grid; grid-template-columns:1fr auto; gap:10px; align-items:start; }
+    .job h3 { margin:0; font-size:16px; line-height:1.35; letter-spacing:-.02em; }
+    .company { display:block; margin-top:2px; color:var(--accent); font-size:12px; font-weight:800; }
+    .date { color:var(--muted); text-align:right; white-space:nowrap; font:400 10px/1.45 "DM Mono",monospace; }
+    .job ul { margin:12px 0 0; padding-left:17px; color:#46554f; font-size:12.5px; }
+    .job li + li { margin-top:4px; }
+    .outcomes { display:flex; gap:10px; margin:13px 0 0; }
+    .outcome { min-width:0; flex:1; padding:10px; background:#eaf6f0; border-left:3px solid var(--accent); color:#284a3d; font-size:11px; font-weight:700; line-height:1.35; }
+    .education-item + .education-item { margin-top:16px; }
+    .education-item h3 { margin:0; font-size:13px; line-height:1.4; }
+    .education-item p { margin:3px 0 0; color:var(--muted); font-size:11px; }
+    .certs { margin:0; padding:0; list-style:none; }
+    .certs li { padding:9px 0; border-bottom:1px solid var(--line); color:#42554d; font-size:11.5px; }
+    .certs li:last-child { border:0; }
+    footer { display:flex; justify-content:space-between; gap:24px; padding:18px 58px; background:#11221d; color:#b9cec5; font:400 10px/1.5 "DM Mono",monospace; }
+    @media print { body{background:white} .page{margin:0;box-shadow:none;max-width:none} .hero{min-height:260px;padding:32px 44px} h1{margin-top:32px;font-size:54px}.contact{margin-top:30px} aside{padding:30px 30px 38px 44px}.content{padding:30px 44px 42px 34px} section+section{margin-top:25px} .job{padding-bottom:19px} footer{padding:13px 44px} }
+    @media (max-width:720px) { .page{margin:0}.hero{padding:32px 25px;min-height:340px}.availability{display:none}h1{margin-top:43px}.contact{margin-top:42px;gap:8px 13px}main{display:block}aside,.content{padding:32px 25px}.content{padding-top:38px}.project-grid{grid-template-columns:1fr}.job-head{grid-template-columns:1fr}.date{text-align:left}.outcomes{flex-direction:column}footer{padding:16px 25px;display:block}footer span+span{display:block;margin-top:5px} }
+  </style>
+</head>
+<body>
+  <article class="page">
+    <header class="hero">
+      <div class="topline"><span class="brand">Portfolio / Resume 2026</span><span class="availability"><i></i> Available for global projects</span></div>
+      <h1>Muhammad<br>Sabir Riaz</h1>
+      <p class="role">WordPress &amp; Shopify Developer · AI Automation Specialist</p>
+      <div class="contact">
+        <span>Lahore, Pakistan</span><a href="mailto:sabir.riaz.786@gmail.com">sabir.riaz.786@gmail.com</a><a href="tel:+923005894658">+92 300 5894658</a><a href="https://linkedin.com/in/sabir-riaz">linkedin.com/in/sabir-riaz</a>
+      </div>
+    </header>
+    <main>
+      <aside>
+        <section>
+          <h2 class="section-title">Core capabilities</h2>
+          <div class="skill-group"><h3>CMS &amp; E-commerce</h3><div class="skills"><span class="tag">WordPress</span><span class="tag">Shopify / Liquid</span><span class="tag">WooCommerce</span><span class="tag">Themes &amp; Plugins</span><span class="tag">ACF &amp; CPTs</span></div></div>
+          <div class="skill-group"><h3>Development</h3><div class="skills"><span class="tag">PHP</span><span class="tag">MySQL</span><span class="tag">JavaScript</span><span class="tag">jQuery</span><span class="tag">REST APIs</span><span class="tag">HTML5 / CSS3</span><span class="tag">Tailwind CSS</span><span class="tag">Bootstrap</span></div></div>
+          <div class="skill-group"><h3>Delivery &amp; quality</h3><div class="skills"><span class="tag">Figma to WordPress</span><span class="tag">Elementor</span><span class="tag">WPBakery</span><span class="tag">SEO</span><span class="tag">Core Web Vitals</span><span class="tag">Cross-browser QA</span><span class="tag">Security &amp; Maintenance</span></div></div>
+        </section>
+        <section class="ai-box"><h3>AI-accelerated delivery</h3><p>Claude Code for rapid prototyping, refactoring, code reviews and workflow automation. Practical AI automation for content operations, support flows and e-commerce processes.</p></section>
+        <section>
+          <h2 class="section-title">Education</h2>
+          <div class="education-item"><h3>BS Computer Science</h3><p>NCBA&amp;E, Bahawalpur · 2015–2019</p></div>
+        </section>
+        <section>
+          <h2 class="section-title">Certifications</h2>
+          <ul class="certs"><li>Full Stack Development · Corvit Software House · 2020</li><li>Web Design &amp; Development · PSDF · 2019</li><li>Graphic Design · DigiSkills · 2019</li><li>WordPress Design &amp; Development · DigiSkills · 2019</li><li>Digital Marketing · DigiSkills · 2021</li></ul>
+        </section>
+        <section><h2 class="section-title">Languages</h2><p class="summary"><strong>Urdu</strong> · Native<br><strong>English</strong> · Conversational</p></section>
+      </aside>
+      <div class="content">
+        <section>
+          <h2 class="section-title">Professional summary</h2>
+          <p class="summary">Results-driven WordPress &amp; Shopify Developer with 5+ years of experience delivering high-performance, SEO-optimised, custom-coded web solutions for international clients. Specialist in WordPress themes and plugins, Shopify Liquid, ACF, custom post types, WooCommerce, UI/UX implementation and Core Web Vitals optimisation. Trusted to turn business requirements into pixel-perfect, conversion-driven websites across Pakistan, UAE, Saudi Arabia, Canada, the UK and the US.</p>
+        </section>
+        <section>
+          <h2 class="section-title">Experience</h2>
+          <div class="job"><div class="job-head"><div><h3>Senior Software Engineer</h3><span class="company">OMG Web Development &amp; Design Inc. · Canada · Remote</span></div><span class="date">JUL 2026 — PRESENT</span></div><ul><li>Lead the design, development and delivery of scalable web applications and e-commerce solutions for clients across multiple industries.</li><li>Drive technical implementation from requirements and architecture through quality assurance, deployment and ongoing optimisation.</li><li>Apply WordPress development, Shopify customisation and modern front-end practices to create reliable, high-performing digital experiences.</li><li>Collaborate across remote teams to deliver business-focused web solutions on schedule.</li></ul></div>
+          <div class="job"><div class="job-head"><div><h3>WordPress &amp; Shopify Custom Developer</h3><span class="company">Dot2Shape · Lahore</span></div><span class="date">NOV 2025 — JUL 2026</span></div><ul><li>Led end-to-end WordPress and Shopify delivery, from technical planning and architecture through deployment.</li><li>Built custom WordPress themes, ACF field groups, CPT structures and dynamic templates; developed Shopify Liquid sections, blocks and complete theme customisations.</li><li>Converted Figma designs into responsive, pixel-perfect, conversion-focused websites; integrated third-party APIs, payment gateways and advanced e-commerce features.</li><li>Optimised speed, SEO and Core Web Vitals; maintained reusable component and template libraries.</li></ul><div class="outcomes"><div class="outcome">7+ websites delivered ahead of tight deadlines</div><div class="outcome">35–60% faster page loads across client projects</div></div></div>
+          <div class="job"><div class="job-head"><div><h3>WordPress &amp; Shopify Developer</h3><span class="company">SSA Soft (PVT) LTD · Lahore</span></div><span class="date">MAR 2023 — OCT 2025</span></div><ul><li>Developed custom WordPress themes, plugins and ACF-powered dynamic templates for client websites.</li><li>Built and optimised WooCommerce stores with tailored checkout logic and product layouts.</li><li>Achieved 90+ Google PageSpeed scores through Core Web Vitals optimisation.</li><li>Converted Figma and PSD designs into fully responsive WordPress experiences.</li></ul></div>
+          <div class="job"><div class="job-head"><div><h3>WordPress Developer</h3><span class="company">Techleadz · Lahore</span></div><span class="date">JAN 2021 — MAR 2023</span></div><ul><li>Maintained and enhanced high-traffic WordPress websites, including custom post types, taxonomies and page templates.</li><li>Delivered UI/UX improvements, QA testing, debugging and direct client communication.</li></ul></div>
+        </section>
+        <section>
+          <h2 class="section-title">Selected project experience</h2>
+          <ul class="project-grid"><li>dot2shape.com</li><li>brksmart.com</li><li>alsamh.ae</li><li>rsnlsupply.com</li><li>gbs-saudi.com</li><li>calderdale.co.uk</li><li>youtothenth.com</li><li>printnbox.com</li><li>brockexcavation.ca</li><li>wellnessirl.com</li><li>montanacustomsheds.com</li><li>athletescombatingracism.org</li><li>courageflyfishing.com</li><li>prestondentalcentre.com</li><li>crofttreeexperts.ca</li><li>travel-mortrailersales.com</li><li>xhome.ae</li><li>mhraccountants.com</li><li>gcg.ae</li><li>modernlaundry.net</li><li>laballerina.co.uk</li><li>wareef.edu.sa</li><li>3i.sa</li><li>vitextech.com</li><li>muraspec.com</li><li>aathar.org.sa</li><li>wallspainting.com</li><li>isghmatrimonial.org</li></ul>
+        </section>
+      </div>
+    </main>
+    <footer><span>MUHAMMAD SABIR RIAZ · WORDPRESS &amp; SHOPIFY DEVELOPER</span><span>Built for people and ATS systems.</span></footer>
+  </article>
+</body>
+</html>
